@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class AddToCartTests extends BaseTest {
 
-    public static final String AMOUNT_OF_GOOGS_ONE = "1";
+    public static final String AMOUNT_OF_GOODS_ONE = "1";
     public static final String AMOUNT_OF_GOODS_TWO = "2";
 
     @Test
@@ -18,7 +18,7 @@ public class AddToCartTests extends BaseTest {
                 .clickAddToCardButton();
         storage.getPage(CardPage.class)
                 .clickComebackButton();
-        Assert.assertEquals(AMOUNT_OF_GOOGS_ONE, storage.getPage(HomePage.class).getAmountOfGoodsInTheCardText());
+        Assert.assertEquals(AMOUNT_OF_GOODS_ONE, storage.getPage(HomePage.class).getAmountOfGoodsInTheCardText());
         storage.getPage(HomePage.class)
                 .clickAddToCardPhoneButton();
         storage.getPage(CardPage.class)
